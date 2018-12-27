@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="https://raw.githubusercontent.com/zhang657369695/github/master/test/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css"/>
 		<style>
 			.table{
 				border: #000000 solid 1px;
@@ -31,7 +31,7 @@
 						</thead>
 						<tbody class="table-hover">
 							<tr v-for="(item,index) in commodityData">
-								<td><input type="checkbox" @change="checkone" v-model="item.ischeck"/></td>
+								<td><input type="checkbox" @change="checkone" v-model="item.ischeck"/>{{item.ischeck}}</td>
 								<td>
 									<span><img :style="{width: width+'px'}" :src="item.commodityImgSrc" ></span>
 									<span>{{item.commodityName}}</span>
@@ -67,7 +67,7 @@
 			let vm = new Vue({
 				el:"#app",
 				created(){
-					$.get("https://raw.githubusercontent.com/zhang657369695/github/master/test/js/newData.json",function(data){
+					$.get("js/newData.json",function(data){
 						console.log(data);
 						vm.commodityData = data;//将后台获取过来的数据存放在VUE中自定的数组上.
 					})
