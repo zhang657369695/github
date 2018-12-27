@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css"/>
+		<style>
+			.table{
+				border: #000000 solid 1px;
+			}
+			.table td{
+				font-size: 12px;
+				color: #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div class="container">
+					<table class="table table-bordered">
+						<caption class="text-center h2">主标题</caption>
+						<thead>
+							<tr>
+								<th>全选<input type="checkbox" @change="checkall" v-model="all"></th>
+								<th>名称</th>
+								<th>个数</th>
+								<th>单价</th>
+								<th>小计</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody class="table-hover">
+							<tr v-for="(item,index) in commodityData">
+								<td><input type="checkbox" @change="checkone" v-model="item.ischeck"/></td>
+								<td>
+									<span><img :style="{width: width+'px'}" :src="item.commodityImgSrc" ></span>
+									<span>{{item.commodityName}}</span>
+								</td>
+								<td>
+								<button type="button" min="1" class="btn btn-default" @click="minius(index)">-</button>
+								<input type="number" @keyup="keydown(index)" v-model.number="item.num"/>
+								<button type="button" @click="btn_add(index)" class="btn btn-default">+</button>
+								</td>
+								<td>¥{{item.Price}}</td>
+								<td>¥{{(item.num*item.Price).toFixed(2)}}</td>
+								<td><button type="button" @click="remove(index)" class="btn btn-warning">删除</button></td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="6">总价:<span>{{totalPrices}}</span></td>
+							</tr>
+						</tfoot>
+					</table>
+					
+			</div>
+		</div>
+		
+		
+		<script type="text/javascript" src="js/jquery3.2.js"></script>
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			/* $.get("js/newData.json",function(data){
+				console.log(data)
+			}) */
+			
+			let vm = new Vue({
+				el:"#app",
+				created(){
+					$.get("js/newData.json",function(data){
+						console.log(data);
+						vm.commodityData = data;//将后台获取过来的数据存放在VUE中自定的数组上.
+					})
+				},
+				data:{
+					commodityData:[],
+					width:"50",
+					val:'1',
+					all:true,
+					checkeds:[]
+				},
+				methods:{
+					remove(index){
+						 var List = this.commodityData;
+						 var removeList = confirm("确认删除商品吗？")
+						 if(removeList){
+							 List.splice(index, 1);
+						}
+					},
+					compute(){
+						for(let i=0; i<this.commodityData.length; i++){
+							let t= 0;
+							t=this.commodityData[i].Price*this.val;
+							console.log(t);
+							return t;
+						}
+					},
+					btn_add(index){
+						this.commodityData[index].num++;
+					},
+					minius(index){
+						this.commodityData[index].num--;
+						if(this.commodityData[index].num<=1)
+						{
+							this.commodityData[index].num=1
+						}
+					},
+					keydown(index){
+						if(this.commodityData[index].num>=100)
+						{
+							this.commodityData[index].num=100;
+							alert("最多限购100件")
+						}
+						if(this.commodityData[index].num<=1)
+						{
+							this.commodityData[index].num=1
+						}
+					},
+					checkall(){
+						this.commodityData.forEach(item=>item.ischeck=this.all)
+					},
+					checkone(){
+						
+						this.all = this.commodityData.every(item=>item.ischeck)
+					}
+				},
+				computed:{
+					 totalPrices: function () {  //计算总价
+						let totalPrices = 0;
+						this.commodityData.forEach(function (val, index) {
+							if (val.ischeck == true){
+								totalPrices += parseFloat(val.Price * val.num);
+							}
+						})
+						return totalPrices.toFixed(2); //保留2位数
+					}
+				}
+			})
+			
+			
+		</script>
+	</body>
+</html>
