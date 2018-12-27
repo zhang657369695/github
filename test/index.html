@@ -31,7 +31,7 @@
 						</thead>
 						<tbody class="table-hover">
 							<tr v-for="(item,index) in commodityData">
-								<td><input type="checkbox" @change="checkone" v-model="item.ischeck"/>{{item.ischeck}}</td>
+								<td><input type="checkbox" @change="checkone" v-model="item.ischeck"/></td>
 								<td>
 									<span><img :style="{width: width+'px'}" :src="item.commodityImgSrc" ></span>
 									<span>{{item.commodityName}}</span>
