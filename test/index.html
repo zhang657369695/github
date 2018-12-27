@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css"/>
+		<link rel="https://raw.githubusercontent.com/zhang657369695/github/master/test/bootstrap-3.3.7-dist/css/bootstrap.css"/>
 		<style>
 			.table{
 				border: #000000 solid 1px;
@@ -67,7 +67,7 @@
 			let vm = new Vue({
 				el:"#app",
 				created(){
-					$.get("js/newData.json",function(data){
+					$.get("https://raw.githubusercontent.com/zhang657369695/github/master/test/js/newData.json",function(data){
 						console.log(data);
 						vm.commodityData = data;//将后台获取过来的数据存放在VUE中自定的数组上.
 					})
