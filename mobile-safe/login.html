@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="js/bootstrap-3.3.5-dist/css/bootstrap.min.css" />
+<link href="css/base.css" type="text/css" rel="stylesheet">
+<link href="css/popBox.css" type="text/css" rel="stylesheet">	
+<link href="css/index.css" type="text/css" rel="stylesheet">
+<link href="css/head-foot.css" type="text/css" rel="stylesheet">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-3.3.5-dist/js/bootstrap.min.js" ></script>
+<script src="js/index.js"></script>
+<script src="js/popBox.js"></script>
+<script>
+$(function(){
+	function height(){
+		var h=$(window).height();
+		$('.widow-height').height(h-52);	
+	}	
+	height();
+})
+
+</script>
+
+</head>
+
+<body>
+	<header class="container-fluid haed">
+    	<div class="col-lg-4 h_left">
+        	<span class="logo text-center fl"><img src="imges/head-foot/logo.png" alt=""></span>
+            <h3 class="fl title">移动安全能力开放平台</h3>	
+        </div>
+    	<div class="col-lg-8 h_right text-right hidden">
+        	<div class="popo fr">
+            	<button class="btn btn-primary" type="button">
+                   <span class="badge text-center">2</span>
+                </button>
+            </div>
+        	<div class="name fr">
+            	<p><span>weidan@sinosoft.com</span><i class="ico"></i></p>
+                <!--<ul>
+                	<li>aaaaaa</li>
+                    <li>aaaaaa</li>
+                    <li>aaaaaa</li>
+                    <li>aaaaaa</li>
+                </ul>-->
+            </div>
+        	
+            
+        </div>
+    </header>
+    <div class="container-fluid cent widow-height">
+    		<form class="text-center" action="index.html">
+            	<h3><i><img src="imges/head-foot/logo.png" alt=""></i>管理用户登录</h3>
+            	<div class="login">
+                	<div class="login_name">
+                    	<b><img src="imges/head-foot/name.png" alt=""></b><input class="text" type="text" placeholder="用户名">
+                    </div>
+                    <hr class="border">
+                    <div class="login_name">
+                    	<b><img src="imges/head-foot/password.png" alt=""></b><input class="text" type="password" placeholder="密码">
+                    </div>
+                </div>
+                <input type="submit" value="登录" class="sub btn" style="margin-top:36px;">
+            </form>
+    
+    </div>
+</body>
+
+</html>

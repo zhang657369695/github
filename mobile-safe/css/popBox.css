@@ -1,0 +1,65 @@
+
+button.close span{
+	width: 26px;
+	height: 26px;
+	border: #dfdfdf 1px solid;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 22px;
+	display: inline-block;
+}
+.palaning{
+	width: 880px;
+	height: 335px;
+	border: #c9c9c9 solid 1px;
+	padding:0 6px;
+}
+.modal-backdrop.in{
+	opacity: 0.1;
+	filter: alpha(opacity=10);
+}
+.modal-dialog{
+	    margin: 90px auto;
+}
+
+
+
+
+/*删除提示样式*/
+.delete .modal-header .close{
+	margin-top: -13px;
+	position: relative;
+	left: 10px;
+
+}
+.delete .modal-body h4{
+	font-size: 22px;
+	text-align: center;
+	line-height: 30px;
+	height: 30px;
+
+}
+
+
+ .shows{ background:rgba(0,0,0,.4); position:absolute; top:0px; left:0px; z-index:200;}
+ .popoBox{ 
+ 	width: 400px;
+	height:100px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	z-index:10000;
+	margin-left:-200px;
+	margin-top:-50px;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+ }
+  .popoBox h4{ height:40px; line-height:40px; font-size:22px; color:#333; text-align:center}
+  

@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>能力管理</title>
+<link rel="stylesheet" href="js/bootstrap-3.3.5-dist/css/bootstrap.min.css" />
+<link href="css/base.css" type="text/css" rel="stylesheet">
+<link href="css/popBox.css" type="text/css" rel="stylesheet">	
+<link href="css/index.css" type="text/css" rel="stylesheet">
+<link href="css/head-foot.css" type="text/css" rel="stylesheet">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-3.3.5-dist/js/bootstrap.min.js" ></script>
+<script src="js/index.js"></script>
+<script src="js/popBox.js"></script>
+<script>
+$(function(){
+	function height(){
+		var h=$(window).height();
+		$('.widow-height').height(h-52);	
+	}	
+	height();
+	
+})
+
+</script>
+
+</head>
+
+<body>
+	<header class="container-fluid haed">
+    	<div class="col-lg-4 h_left">
+        	<span class="logo text-center fl"><img src="imges/head-foot/logo.png" alt=""></span>
+            <h3 class="fl title">移动安全能力开放平台</h3>	
+        </div>
+    	<div class="col-lg-8 h_right text-right">
+        	<div class="popo fr">
+            	<button class="btn btn-primary" type="button">
+                   <span class="badge text-center">2</span>
+                </button>
+            </div>
+        	<div class="name fr">
+            	<p><span>weidan@sinosoft.com</span><i class="ico"></i></p>
+                <!--<ul>
+                	<li>aaaaaa</li>
+                    <li>aaaaaa</li>
+                    <li>aaaaaa</li>
+                    <li>aaaaaa</li>
+                </ul>-->
+            </div>
+        	
+            
+        </div>
+    </header>
+    <div class="container-fluid mainBox">
+    		<div class="m-left widow-height fl">
+            	<ul class="list listtg">
+                	<li>
+                			<h4><i></i>服务与功能</h4>
+                				<dl>
+                					<dd><b class="p"></b><a href="platform-monitor.html">平台监控</a></dd>
+                						<dd><b class="b"></b><a href="Alarm-planning.html">报警规则</a></dd>
+                						<dd><b class="n"></b><a href="ability-manage.html">能力管理</a></dd>
+                						<dd><b class="f"></b><a href="serve-manage.html">服务管理</a></dd>
+                						<dd><b class="t"></b><a href="Statistical-report.html">统计报表</a></dd>
+                				</dl>
+                		</li>
+                		<li>
+                			<h4><i></i>系统管理</h4>
+                				<dl>
+                					<dd><b class="y"></b><a href="user-management.html">用户管理</a></dd>
+                						<dd><b class="j"></b><a href="Role-management.html">角色管理</a></dd>
+                						<dd><b class="x"></b><a href="journal.html">消息日志</a></dd>
+                						<dd><b class="z"></b><a href="Dictionaries-manage.html">字典管理</a></dd>
+                				</dl>
+                		</li>
+                </ul>
+            </div>
+            <div class="m-right widow-height">
+            	
+            	<div class="tabCent">
+                	
+                	<div class="c-list">
+                    	<div class="title-top clearfix" style="margin-bottom:26px;">
+                        		<b class="fl">|</b><h5 class="fl">能力管理</h5>
+                                <button class="addbtn fr" onClick="location.href='add-ability-manage.html'"><i class="ico"></i>添加能力</button>
+                        </div>
+                       <div class="tabBox">
+                       		<form class="clearfix">
+                            	<select class="fl text select form-control ">
+                                	<option>能力平台</option>
+                                    <option>能力平台</option>
+                                    <option>能力平台</option>
+                                </select>
+                                <label class="fl" style="margin-left:25px;">
+                                	能力名称
+                                    <input type="text" class="text form-control ">
+                                </label>
+                                <input type="submit" class="text-center btn" style="margin-left:13px;" value="查询">
+                                <hr class="hr" style="margin-top:16px;">
+                            </form>
+                            <table class="atab" width="100%" cellpadding="0" cellspacing="0">
+                            	<tbody>
+                                	<tr height="48">
+                                    	<th width="80"><span style="padding-left:14px;">能力ID</span></th>
+                                        <th width="242"><span style="padding-left:30px;">能力名称</span></th>
+                                        <th width="261"><span style="padding-left:48px;">能力平台</span></th>
+                                        <th width="204"><span style="padding-left:34px;">能力标识</span></th>
+                                        <th width="140" align="center"><span style=" display:block; text-align:center">协议</span></th>
+                                        <th width="216"><span style="display:block; text-align:center">延迟策略</span></th>
+                                       	<th width="130" align="center"><span style="display:block; text-align:center">操作</span></th>
+                                    </tr>
+                                    <tr height="46">
+                                    	<td width="80" align="center"><span>1</span></td>
+                                        <td><p>按地区统计恶意事件</p></td>
+                                        <td><p>恶意程序监控与处置平台</p></td>
+                                        <td><p>AtatBadEventByRegion</p></td>
+                                        <td align="center"><p>HTTP</p></td>
+                                        <td><p style="text-align:center">延迟处理</p></td>
+                                        <td><a href="#" style="padding-left:15px;">编辑</a><a href="#">删除</a></td>
+                                    </tr>
+                                    <tr height="46">
+                                    	<td width="80" align="center"><span>2</span></td>
+                                        <td><p>按地区统计恶意事件</p></td>
+                                        <td><p>恶意程序监控与处置平台</p></td>
+                                        <td><p>AtatBadEventByRegion</p></td>
+                                        <td align="center"><p>HTTP</p></td>
+                                        <td><p style="text-align:center">延迟处理</p></td>
+                                        <td><a href="#" style="padding-left:15px;">编辑</a><a href="#">删除</a></td>
+                                    </tr>
+                                    <tr height="46">
+                                    	<td width="80" align="center"><span>3</span></td>
+                                        <td><p>按地区统计恶意事件</p></td>
+                                        <td><p>恶意程序监控与处置平台</p></td>
+                                        <td><p>AtatBadEventByRegion</p></td>
+                                        <td align="center"><p>HTTP</p></td>
+                                        <td><p style="text-align:center">延迟处理</p></td>
+                                        <td><a href="#" style="padding-left:15px;">编辑</a><a href="#">删除</a></td>
+                                    </tr>
+                                    <tr height="46">
+                                    	<td width="80" align="center"><span>4</span></td>
+                                        <td><p>按地区统计恶意事件</p></td>
+                                        <td><p>恶意程序监控与处置平台</p></td>
+                                        <td><p>AtatBadEventByRegion</p></td>
+                                        <td align="center"><p>HTTP</p></td>
+                                        <td><p style="text-align:center">延迟处理</p></td>
+                                        <td><a href="#" style="padding-left:15px;">编辑</a><a href="#">删除</a></td>
+                                    </tr>
+                                    <tr height="46">
+                                    	<td width="80" align="center"><span>5</span></td>
+                                        <td><p>按地区统计恶意事件</p></td>
+                                        <td><p>恶意程序监控与处置平台</p></td>
+                                        <td><p>AtatBadEventByRegion</p></td>
+                                        <td align="center"><p>HTTP</p></td>
+                                        <td><p style="text-align:center">延迟处理</p></td>
+                                        <td><a href="#" style="padding-left:15px;">编辑</a><a href="#">删除</a></td>
+                                    </tr>
+                                    <tr height="46">
+                                    	<td width="80" align="center"><span>6</span></td>
+                                        <td><p>来电提示</p></td>
+                                        <td><p>恶意程序监控与处置平台</p></td>
+                                        <td><p>AtatBadEventByRegion</p></td>
+                                        <td align="center"><p>HTTP</p></td>
+                                        <td><p style="text-align:center">延迟处理</p></td>
+                                        <td><a href="#" style="padding-left:15px;">编辑</a><a href="#">删除</a></td>
+                                    </tr>
+                                    
+                                </tbody>
+                            
+                            </table>
+                            <div class="pags">
+                            	<em>共6条</em>
+                               <select class="selest">
+                               
+                               <option>1</option>
+                               <option>2</option>
+                               <option>3</option>
+                               <option>4</option>
+                               
+                              </select>
+                               <ul class="pagination">
+                                <li class="">
+                                  <span>
+                                    <span aria-hidden="true">&lt;</span>
+                                  </span>
+                                </li>
+                                <li class="active">
+                                  <span>1 <span class="sr-only">(current)</span></span>
+                                </li>
+                                 <li class="">
+                                  <span>2 <span class="sr-only">(current)</span></span>
+                                </li>
+                                <li class="">
+                                  <span>
+                                    <span aria-hidden="true">&gt;</span>
+                                  </span>
+                                </li>
+                               
+                              </ul>
+                            </div>
+                       </div>
+                    				
+                    </div>
+                   
+                  
+                </div>
+            
+            
+            </div>
+    
+    </div>
+</body>
+
+</html>

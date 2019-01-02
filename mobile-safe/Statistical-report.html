@@ -1,0 +1,330 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>统计表报</title>
+<link rel="stylesheet" href="js/bootstrap-3.3.5-dist/css/bootstrap.min.css" />
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" media="all" href="js/bootstrap-datetimepicker-master/daterangepicker-bs3.css">
+<link href="css/base.css" type="text/css" rel="stylesheet">
+<link href="css/popBox.css" type="text/css" rel="stylesheet">	
+<link href="css/index.css" type="text/css" rel="stylesheet">
+<link href="css/head-foot.css" type="text/css" rel="stylesheet">
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-3.3.5-dist/js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker-master/moment.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker-master/daterangepicker.js"></script>
+<script src="js/index.js"></script>
+<script src="js/popBox.js"></script>
+
+
+<script>
+$(function(){
+	function height(){
+		var h=$(window).height();
+		$('.widow-height').height(h-52);	
+	}	
+	height();
+	
+})
+
+</script>
+
+</head>
+
+<body>
+	<header class="container-fluid haed">
+    	<div class="col-lg-4 h_left">
+        	<span class="logo text-center fl"><img src="imges/head-foot/logo.png" alt=""></span>
+            <h3 class="fl title">移动安全能力开放平台</h3>	
+        </div>
+    	<div class="col-lg-8 h_right text-right">
+        	<div class="popo fr">
+            	<button class="btn btn-primary" type="button">
+                   <span class="badge text-center">2</span>
+                </button>
+            </div>
+        	<div class="name fr">
+            	<p><span>weidan@sinosoft.com</span><i class="ico"></i></p>
+                <!--<ul>
+                	<li>aaaaaa</li>
+                    <li>aaaaaa</li>
+                    <li>aaaaaa</li>
+                    <li>aaaaaa</li>
+                </ul>-->
+            </div>
+        	
+            
+        </div>
+    </header>
+    <div class="container-fluid mainBox">
+    		<div class="m-left widow-height fl">
+            	<ul class="list listtg">
+                	<li>
+                			<h4><i></i>服务与功能</h4>
+                				<dl>
+                					<dd><b class="p"></b><a href="platform-monitor.html">平台监控</a></dd>
+                						<dd><b class="b"></b><a href="Alarm-planning.html">报警规则</a></dd>
+                						<dd><b class="n"></b><a href="ability-manage.html">能力管理</a></dd>
+                						<dd><b class="f"></b><a href="serve-manage.html">服务管理</a></dd>
+                						<dd><b class="t"></b><a href="Statistical-report.html">统计报表</a></dd>
+                				</dl>
+                		</li>
+                		<li>
+                			<h4><i></i>系统管理</h4>
+                				<dl>
+                					<dd><b class="y"></b><a href="user-management.html">用户管理</a></dd>
+                						<dd><b class="j"></b><a href="Role-management.html">角色管理</a></dd>
+                						<dd><b class="x"></b><a href="journal.html">消息日志</a></dd>
+                						<dd><b class="z"></b><a href="Dictionaries-manage.html">字典管理</a></dd>
+                				</dl>
+                		</li>
+                </ul>
+            </div>
+            <div class="m-right widow-height">
+            	
+            	<div class="tabCent">
+                	
+                	<div class="c-list">
+                    	<div class="title-top clearfix" style="margin-bottom:12px;">
+                        		<b class="fl" style="margin-left:0;">|</b><h5 class="fl">统计报表</h5>
+                               <!-- <button class="addbtn fr" onClick="location.href='add-ability-manage.html'"><i class="ico"></i>添加能力</button>-->
+                        </div>
+                       <div class="tabBox" style="padding:0px; border:none;">
+                       		<div class="statical">
+                            	<ul class="nav" id="nav">
+                                   <li class="active">服务调用次数</li>
+                                    <li>服务调用趋势</li>
+                                     <li>服务访问流量</li> 
+                                     <li>服务访问流量趋势</li>
+                                      <li>服务调用Top10 </li>
+                                      <li>服务报错Top10</li>
+                                      <li>服务超时Top10</li>
+                                      
+                                  </ul>
+                                
+                                 
+                            </div>
+                             <!-- Tab panes -->
+                                  <div class="tab-content" id="tcBox">
+                                  	<div class="tcontent" style="display:block">
+                                    	<div class="t-top">
+                                        	<div class="tbox clearfix">
+                                            	<select class="fl text select form-control ">
+                                                	<option>服务调用方</option>
+                                                    <option>服务调用方</option>
+                                                </select>
+                                                <select class="fl text select form-control ">
+                                                	<option>能力平台</option>
+                                                    <option>服务调用方</option>
+                                                </select>
+                                                <div id="staistext" class="fl" style="width:300px; height:24px; position:relative; top:-2px; left:0px;">
+                                                	
+                                                    <!--时间插件-->
+                                                    	<form class="form-horizontal">
+                                                         <fieldset>
+                                                          <div class="control-group">
+                                                           
+                                                            <div class="controls">
+                                                             <div class="input-prepend input-group">
+                                                               <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+                                                               <input type="text" style="width: 400px" name="reservation" id="reservationtime" class="form-control" value="08/01/2013 1:00 PM - 08/01/2013 1:30 PM"  class="span4"/>
+                                                             </div>
+                                                            </div>
+                                                          </div>
+                                                         </fieldset>
+                                                       </form>
+                                                    
+                                                    
+                                                	<!--时间插件-->
+                                                    
+                                                   <script type="text/javascript">
+													   $(document).ready(function() {
+														   
+														    function set(){
+															 $('#reservationtime').daterangepicker({
+																timePicker: true,
+																timePickerIncrement: 30,
+																format: 'MM/DD/YYYY h:mm A'
+															  }, function(start, end, label) {
+																console.log(start.toISOString(), end.toISOString(), label);
+															  });  
+														  
+														}
+														setTimeout(set(),3000)
+														   
+														   
+														 /* $('.form-horizontal #reservationtime').click(function(){
+															  $('.opensright').css('left','700px');
+															  })*/
+													   		});
+													   </script> 
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    	<div class="mbox">
+                                        	<img src="imges/img06.jpg" alt="">
+                                        
+                                        </div>
+                                    </div>
+                                    <div class="tcontent">
+                                    	<div class="t-top">
+                                        	<div class="tbox clearfix">
+                                            	<select class="fl text select form-control ">
+                                                	<option>服务调用方</option>
+                                                    <option>服务调用方</option>
+                                                </select>
+                                                <select class="fl text select form-control ">
+                                                	<option>能力平台</option>
+                                                    <option>服务调用方</option>
+                                                </select>
+                                                <div class="fl" style="width:300px; height:24px; position:relative; top:-2px;">
+                                                	
+                                                	<img src="imges/ri.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    	<div class="mbox">
+                                        	<img src="imges/img07.jpg" alt="">
+                                        
+                                        </div>
+                                    </div>
+                                    <div class="tcontent">
+                                    	<div class="t-top">
+                                        	<div class="tbox clearfix">
+                                            	<select class="fl text select form-control ">
+                                                	<option>服务调用方</option>
+                                                    <option>服务调用方</option>
+                                                </select>
+                                                <select class="fl text select form-control ">
+                                                	<option>能力平台</option>
+                                                    <option>服务调用方</option>
+                                                </select>
+                                                <div class="fl" style="width:300px; height:24px; position:relative; top:-2px;">
+                                                	
+                                                	<img src="imges/ri.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    	<div class="mbox">
+                                        	<img src="imges/img08.jpg" alt="">
+                                        
+                                        </div>
+                                    </div>
+                                    <div class="tcontent">
+                                    	<div class="t-top">
+                                        	<div class="tbox clearfix">
+                                            	<select class="fl text select form-control ">
+                                                	<option>服务调用方</option>
+                                                    <option>服务调用方</option>
+                                                </select>
+                                                <select class="fl text select form-control ">
+                                                	<option>能力平台</option>
+                                                    <option>服务调用方</option>
+                                                </select>
+                                                <div class="fl" style="width:300px; height:24px; position:relative; top:-2px;">
+                                                	
+                                                	<img src="imges/ri.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    	<div class="mbox">
+                                        	<img src="imges/img09.jpg" alt="">
+                                        
+                                        </div>
+                                    </div>
+                                    <div class="tcontent">
+                                    	<div class="t-top">
+                                        	<div class="tbox clearfix">
+                                            	<select class="fl text select form-control ">
+                                                	<option>服务调用方</option>
+                                                    <option>服务调用方</option>
+                                                </select>
+                                                <select class="fl text select form-control ">
+                                                	<option>能力平台</option>
+                                                    <option>服务调用方</option>
+                                                </select>
+                                                <div class="fl" style="width:300px; height:24px; position:relative; top:-2px;">
+                                                	
+                                                	<img src="imges/ri.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    	<div class="mbox">
+                                        	<img src="imges/img10.jpg" alt="">
+                                        
+                                        </div>
+                                    </div>
+                                    <div class="tcontent">
+                                    	<div class="t-top">
+                                        	<div class="tbox clearfix">
+                                            	<select class="fl text select form-control ">
+                                                	<option>服务调用方</option>
+                                                    <option>服务调用方</option>
+                                                </select>
+                                                <select class="fl text select form-control ">
+                                                	<option>能力平台</option>
+                                                    <option>服务调用方</option>
+                                                </select>
+                                                <div class="fl" style="width:300px; height:24px; position:relative; top:-2px;">
+                                                	
+                                                	<img src="imges/ri.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    	<div class="mbox">
+                                        	<img src="imges/img11.jpg" alt="">
+                                        
+                                        </div>
+                                    </div>
+                                    <div class="tcontent">
+                                    	<div class="t-top">
+                                        	<div class="tbox clearfix">
+                                            	<select class="fl text select form-control ">
+                                                	<option>服务调用方</option>
+                                                    <option>服务调用方</option>
+                                                </select>
+                                                <select class="fl text select form-control ">
+                                                	<option>能力平台</option>
+                                                    <option>服务调用方</option>
+                                                </select>
+                                                <div class="fl" style="width:300px; height:24px; position:relative; top:-2px;">
+                                                	
+                                                	<img src="imges/ri.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    	<div class="mbox">
+                                        	<img src="imges/img12.jpg" alt="">
+                                        
+                                        </div>
+                                    </div>
+                                    
+                                  </div>
+                            
+                            
+                       </div>
+                    				
+                    </div>
+                   
+                  
+                </div>
+            
+            
+            </div>
+    
+    </div>
+ 	
+</body>
+
+</html>

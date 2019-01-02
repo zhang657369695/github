@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>新建-用户</title>
+<link rel="stylesheet" href="js/bootstrap-3.3.5-dist/css/bootstrap.min.css" />
+ <link rel="stylesheet" href="js/zTree_v3.5.16/css/zTreeStyle/zTreeStyle.css" type="text/css">
+ 
+<link href="css/base.css" type="text/css" rel="stylesheet">
+<link href="css/popBox.css" type="text/css" rel="stylesheet">	
+<link href="css/index.css" type="text/css" rel="stylesheet">
+<link href="css/head-foot.css" type="text/css" rel="stylesheet">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-3.3.5-dist/js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="js/zTree_v3.5.16/js/jquery.ztree.core-3.5.min.js"></script>
+<script type="text/javascript" src="js/zTree_v3.5.16/js/jquery.ztree.excheck-3.5.js"></script>
+<script type="text/javascript" src="js/zTree_v3.5.16/js/js/jquery.ztree.exedit-3.5.js"></script>
+<script src="js/index.js"></script>
+<script src="js/popBox.js"></script>
+<script>
+$(function(){
+	function height(){
+		var h=$(window).height();
+		$('.widow-height').height(h);
+			
+	}	
+	height();
+})
+
+</script>
+<SCRIPT type="text/javascript" >
+  <!--
+	var setting = {
+			async: {
+				enable: true,
+				url: getUrl
+			},
+			check: {
+				enable: true
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			view: {
+				expandSpeed: ""
+			},
+			callback: {
+				beforeExpand: beforeExpand,
+				onAsyncSuccess: onAsyncSuccess,
+				onAsyncError: onAsyncError
+			}
+		};
+
+		var zNodes =[
+			{name:"500个节点", id:"1", count:500, times:1, isParent:true},
+			{name:"1000个节点", id:"2", count:1000, times:1, isParent:true},
+			{name:"2000个节点", id:"3", count:2000, times:1, isParent:true}
+		];
+
+		var log, className = "dark",
+		startTime = 0, endTime = 0, perCount = 100, perTime = 100;
+		function getUrl(treeId, treeNode) {
+			var curCount = (treeNode.children) ? treeNode.children.length : 0;
+			var getCount = (curCount + perCount) > treeNode.count ? (treeNode.count - curCount) : perCount;
+			var param = "id="+treeNode.id+"_"+(treeNode.times++) +"&count="+getCount;
+			return "../asyncData/getNodesForBigData.php?" + param;
+		}
+		function beforeExpand(treeId, treeNode) {
+			if (!treeNode.isAjaxing) {
+				startTime = new Date();
+				treeNode.times = 1;
+				ajaxGetNodes(treeNode, "refresh");
+				return true;
+			} else {
+				alert("zTree 正在下载数据中，请稍后展开节点。。。");
+				return false;
+			}
+		}
+		function onAsyncSuccess(event, treeId, treeNode, msg) {
+			if (!msg || msg.length == 0) {
+				return;
+			}
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			totalCount = treeNode.count;
+			if (treeNode.children.length < totalCount) {
+				setTimeout(function() {ajaxGetNodes(treeNode);}, perTime);
+			} else {
+				treeNode.icon = "";
+				zTree.updateNode(treeNode);
+				zTree.selectNode(treeNode.children[0]);
+				endTime = new Date();
+				var usedTime = (endTime.getTime() - startTime.getTime())/1000;
+				className = (className === "dark" ? "":"dark");
+				showLog("[ "+getTime()+" ]&nbsp;&nbsp;treeNode:" + treeNode.name );
+				showLog("加载完毕，共进行 "+ (treeNode.times-1) +" 次异步加载, 耗时："+ usedTime + " 秒");
+			}
+		}
+		function onAsyncError(event, treeId, treeNode, XMLHttpRequest, textStatus, errorThrown) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			alert("异步获取数据出现异常。");
+			treeNode.icon = "";
+			zTree.updateNode(treeNode);
+		}
+		function ajaxGetNodes(treeNode, reloadType) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			if (reloadType == "refresh") {
+				treeNode.icon = "../../../css/zTreeStyle/img/loading.gif";
+				zTree.updateNode(treeNode);
+			}
+			zTree.reAsyncChildNodes(treeNode, reloadType, true);
+		}
+		function showLog(str) {
+			if (!log) log = $("#log");
+			log.append("<li class='"+className+"'>"+str+"</li>");
+			if(log.children("li").length > 4) {
+				log.get(0).removeChild(log.children("li")[0]);
+			}
+		}
+		function getTime() {
+			var now= new Date(),
+			h=now.getHours(),
+			m=now.getMinutes(),
+			s=now.getSeconds(),
+			ms=now.getMilliseconds();
+			return (h+":"+m+":"+s+ " " +ms);
+		}
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+
+		});
+  //-->
+  </SCRIPT>
+
+</head>
+
+<body>
+	<header class="container-fluid haed">
+    	<div class="col-lg-4 h_left">
+        	<span class="logo text-center fl"><img src="imges/head-foot/logo.png" alt=""></span>
+            <h3 class="fl title">移动安全能力开放平台</h3>	
+        </div>
+    	<div class="col-lg-8 h_right text-right">
+        	<div class="popo fr">
+            	<button class="btn btn-primary" type="button">
+                   <span class="badge text-center">2</span>
+                </button>
+            </div>
+        	<div class="name fr">
+            	<p><span>weidan@sinosoft.com</span><i class="ico"></i></p>
+                <!--<ul>
+                	<li>aaaaaa</li>
+                    <li>aaaaaa</li>
+                    <li>aaaaaa</li>
+                    <li>aaaaaa</li>
+                </ul>-->
+            </div>
+        	
+            
+        </div>
+    </header>
+    <div class="container-fluid mainBox">
+    		<div class="m-left widow-height fl">
+            	<ul class="list listtg">
+                	<li>
+                			<h4><i></i>服务与功能</h4>
+                				<dl>
+                					<dd><b class="p"></b><a href="platform-monitor.html">平台监控</a></dd>
+                						<dd><b class="b"></b><a href="Alarm-planning.html">报警规则</a></dd>
+                						<dd><b class="n"></b><a href="ability-manage.html">能力管理</a></dd>
+                						<dd><b class="f"></b><a href="serve-manage.html">服务管理</a></dd>
+                						<dd><b class="t"></b><a href="Statistical-report.html">统计报表</a></dd>
+                				</dl>
+                		</li>
+                		<li>
+                			<h4><i></i>系统管理</h4>
+                				<dl>
+                					<dd><b class="y"></b><a href="user-management.html">用户管理</a></dd>
+                						<dd><b class="j"></b><a href="Role-management.html">角色管理</a></dd>
+                						<dd><b class="x"></b><a href="journal.html">消息日志</a></dd>
+                						<dd><b class="z"></b><a href="Dictionaries-manage.html">字典管理</a></dd>
+                				</dl>
+                		</li>
+                </ul>
+            </div>
+            <div class="m-right widow-height">
+            	
+            	<div class="tabCent addrole">
+                	
+                	<div class="c-list add-user">
+                    	<div class="title-top newablility clearfix" style="margin-bottom:26px;">
+                        		<b class="fl">|</b><h5 class="fl"><a href="#">角色管理</a><em>&gt;</em><a href="#">角色用户</a></h5>
+                                <button class="addbtn fr"><i class="ico"></i>添加能力</button>
+                        </div>
+                       <div class="tabBox">
+                       		<form class="ablilityBox "style="height:478px; overflow:hidden">
+                            	<div class="ablilityfud">
+                                	<div class="ablilityL" >
+                                	<label class="add-userL">角色名称</label>
+                                    <input type="text" class="add-userR form-control text" style="width:296px;" placeholder="服务调用方">
+                                </div>
+                                <div class="ablilityfud">
+                                	<div class="ablilityL">
+                                	<label class="add-userL">角色描述</label>
+                                    <input type="text" class="add-userR form-control text" style="width:296px;" placeholder="服务调用方">
+                                </div>
+                                 <div class="ablilityfud">
+                                	<div class="ablilityL clearfix">
+                                	<label class="add-userL fl">角色权限</label>
+                                   <div class="add-userR treeBox fl" style=" position:relative; left:6px;">
+                                   <style>
+                                   	.ztree span{ padding:0;}
+									.treeBox{ background-color:#edf3e1; width:362px; height:282px; overflow-y:auto; border:#08b0ba solid 1px;}
+                                   </style>
+                                  	<!--z-->
+                                    	<ul id="treeDemo" class="ztree"></ul>
+                                    	
+                                    <!--z--z-->
+                                   </div>
+                                </div>
+                               
+                                
+                                </div>
+                                <div class="btnBox" style="text-align:center; margin-bottom:32px; margin-top:20px;">
+                                 	<input type="submit" class="btn" value="完成" style="width:92px;">
+                                 </div>
+                                
+                            </form>
+                           
+                            
+                       </div>
+                    				
+                    </div>
+                   
+                  
+                </div>
+            
+            
+            </div>
+    
+    </div>
+</body>
+
+</html>

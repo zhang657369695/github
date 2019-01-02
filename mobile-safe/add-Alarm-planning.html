@@ -1,0 +1,375 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>新建-报警规则</title>
+<link rel="stylesheet" href="js/bootstrap-3.3.5-dist/css/bootstrap.min.css" />
+<link href="css/base.css" type="text/css" rel="stylesheet">
+<link href="css/popBox.css" type="text/css" rel="stylesheet">	
+<link href="css/index.css" type="text/css" rel="stylesheet">
+<link href="css/head-foot.css" type="text/css" rel="stylesheet">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-3.3.5-dist/js/bootstrap.min.js" ></script>
+<script src="js/index.js"></script>
+<script src="js/popBox.js"></script>
+<script>
+$(function(){
+	function height(){
+		var h=$(window).height();
+		$('.widow-height').height(h-52);	
+	}	
+	height();
+	
+	
+})
+
+</script>
+
+</head>
+
+<body>
+	<header class="container-fluid haed">
+    	<div class="col-lg-4 h_left">
+        	<span class="logo text-center fl"><img src="imges/head-foot/logo.png" alt=""></span>
+            <h3 class="fl title">移动安全能力开放平台</h3>	
+        </div>
+    	<div class="col-lg-8 h_right text-right">
+        	<div class="popo fr">
+            	<button class="btn btn-primary" type="button">
+                   <span class="badge text-center">2</span>
+                </button>
+            </div>
+        	<div class="name fr">
+            	<p><span>weidan@sinosoft.com</span><i class="ico"></i></p>
+                <!--<ul>
+                	<li>aaaaaa</li>
+                    <li>aaaaaa</li>
+                    <li>aaaaaa</li>
+                    <li>aaaaaa</li>
+                </ul>-->
+            </div>
+        	
+            
+        </div>
+    </header>
+    <div class="container-fluid mainBox">
+    		<div class="m-left widow-height fl">
+            	<ul class="list listtg">
+                	<li>
+                			<h4><i></i>服务与功能</h4>
+                				<dl>
+                					<dd><b class="p"></b><a href="platform-monitor.html">平台监控</a></dd>
+                						<dd><b class="b"></b><a href="Alarm-planning.html">报警规则</a></dd>
+                						<dd><b class="n"></b><a href="ability-manage.html">能力管理</a></dd>
+                						<dd><b class="f"></b><a href="serve-manage.html">服务管理</a></dd>
+                						<dd><b class="t"></b><a href="Statistical-report.html">统计报表</a></dd>
+                				</dl>
+                		</li>
+                		<li>
+                			<h4><i></i>系统管理</h4>
+                				<dl>
+                					<dd><b class="y"></b><a href="user-management.html">用户管理</a></dd>
+                						<dd><b class="j"></b><a href="Role-management.html">角色管理</a></dd>
+                						<dd><b class="x"></b><a href="journal.html">消息日志</a></dd>
+                						<dd><b class="z"></b><a href="Dictionaries-manage.html">字典管理</a></dd>
+                				</dl>
+                		</li>
+                </ul>
+            </div>
+            <div class="m-right widow-height">
+            	
+            	<div class="tabCent">
+                	
+                	<div class="c-list">
+                    	<div class="title-top newablility clearfix" style="margin-bottom:16px;">
+                        		<b class="fl">|</b><h5 class="fl"><a href="#">报警规则</a><em>&gt;</em><a href="#">新建</a></h5>
+                        </div>
+                       <div class="tabBox add-alarm">
+                       		
+                            <table class="atab atac" width="100%" cellpadding="0" cellspacing="0">
+                            	<tbody>
+                                	<tr height="46">
+                                    	<th width="110"><span>监控项</span></th>
+                                        <th width="306"><span>统计周期</span></th>
+                                        <th width="494"><span>操作方法</span></th>
+                                        <th width="206"><span>操作</span></th>
+                                       
+                                    </tr>
+                                    
+                                    <tr height="46" align="center">
+                                    	<td width="110" align="left">
+                                        	<select class="selest form-control " style="width:108px">
+                                            	<option>通信字节数</option>
+                                            </select>
+                                        </td>
+                                        <td width="306">
+                                        	<select class="selest form-control " style="width:108px">
+                                            	<option>每秒</option>
+                                            </select>
+                                        </td>
+                                        <td width="494">
+                                        	<select class="selest form-control " style="width:86px;">
+                                            	<option>最大值</option>
+                                            </select>
+                                            <select class="selest form-control "  style="width:35px; margin-left:14px;">
+                                            	<option>〉</option>
+                                            </select>
+                                            <label>阈值</label>
+                                            <input type="text" class="text form-control" style="width:80px; height:22px; border:#cbcbcb solid 1px" placeholder="1024">
+                                            <label>KB</label>
+                                        </td>
+                                        <td width="206">
+                                        	<a href="#" class="del"  style="padding:0" >删除</a>
+                                        </td>
+                                       
+                                    </tr>
+                                    <tr height="46" align="center">
+                                    	<td width="110" align="left" valign="middle">
+                                        	<select class="selest form-control " style="width:108px">
+                                            	<option>调用次数</option>
+                                            </select>
+                                        </td>
+                                        <td width="306" valign="middle">
+                                        	<select class="selest form-control " style="width:108px">
+                                            	<option>每秒</option>
+                                            </select>
+                                        </td>
+                                        <td width="494" valign="middle">
+                                        	<select class="selest form-control " style="width:86px;">
+                                            	<option>最大值</option>
+                                            </select>
+                                            <select class="selest form-control " style="width:35px; margin-left:14px;">
+                                            	<option>〉</option>
+                                            </select>
+                                            <label>阈值</label>
+                                            <input type="text" class="text form-control" style="width:80px; height:22px; border:#cbcbcb solid 1px" placeholder="50">
+                                            <label>次</label>
+                                        </td>
+                                        <td width="206" valign="middle">
+                                        	<a href="#" class="del"  style="padding:0" >删除</a>
+                                        </td>
+                                       
+                                    </tr>
+                                    <tr height="46" align="center" valign="middle">
+                                    	<td width="110" align="left">
+                                        	<select class="selest form-control " style="width:108px">
+                                            	<option>调用失败率</option>
+                                            </select>
+                                        </td>
+                                        <td width="306">
+                                        	<select class="selest form-control " style="width:108px">
+                                            	<option>5分钟</option>
+                                            </select>
+                                        </td>
+                                        <td width="494">
+                                        	<select class="selest" style="width:86px;">
+                                            	<option>平均值</option>
+                                            </select>
+                                            <select class="selest form-control " style="width:35px; margin-left:14px;">
+                                            	<option>〉</option>
+                                            </select>
+                                            <label>阈值</label>
+                                            <input type="text" class="text form-control" style="width:80px; height:22px; border:#cbcbcb solid 1px;" placeholder="10">
+                                            <label>%</label>
+                                        </td>
+                                        <td width="206">
+                                        	<a href="#" class="del"  style="padding:0" >删除</a>
+                                        </td>
+                                       
+                                    </tr>
+                                    <tr height="48" class="add-alrm addBg">
+                                    	<td colspan="4">
+                                        	<p class="add-Alarm-rules"><i></i>添加报警规则</p>
+                                        </td>
+                                    
+                                    </tr>
+                                    <tr height="48" class="add-alrm" style="border-bottom:none;">
+                                    	<td colspan="4">
+                                        	<div class="fl al">
+                                            	选择报警联系人：
+                                            </div>
+                                            <ul class="fl am">
+                                            	<li>
+                                                	<label>
+                                                    	<input type="checkbox" class="checkbox">管理员1
+                                                        
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                	<label>
+                                                    	<input type="checkbox" class="checkbox">管理员2
+                                                        
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                	<label>
+                                                    	<input type="checkbox" class="checkbox">管理员3
+                                                        
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                	<label>
+                                                    	<input type="checkbox" class="checkbox">管理员3
+                                                        
+                                                    </label>
+                                                </li>
+                                                
+                                            </ul>
+                                            <div class="fl ar">
+                                            	<button class="addbtn fr" style="width:146px;"data-toggle="modal" data-target="#myModal">管理报警联系人</button>
+                                            </div>
+                                        </td>	
+                                    </tr>
+                                    <tr align="left" style="border-bottom:none">
+                                    	<td colspan="4" class="add-a" valign="middle">
+                                        		<button type="button" class="btn" >完成</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                       </div>
+                    				
+                    </div>
+                </div>
+            
+            
+            </div>
+    
+    </div>
+    <!--弹出框管理报警联系人-->
+    
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content palaning">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">管理报警联系人</h4>
+          </div>
+          <div class="modal-body">
+            <div class="addmek clearfix" style="margin-bottom:10px;">
+            	<button class="addbtn fr" data-toggle="modal" data-target="#mydal" style="width:146px;"><i class="ico"></i>添加报警联系人</button>
+            </div>
+            <style>
+				.tab{ width:100%;}
+            	.tab tr{ border:#dddddd solid 1px;}
+				.tab th{ background-color:#f9f9f9; text-align:center}
+				.tab td a{ font-size:14px; color:#4b9cf1; margin-right:13px;}
+            </style>
+            <table class="tab">
+          	<tr height="39" align="center">
+            	<th width="100">姓名</th>
+                <th width="204">手机</th>
+                <th width="340">Email</th>
+                <th width="140">操作</th>
+            </tr>
+          	<tbody>
+            	<tr align="center" height="42">
+                	<td>张三</td>
+                    <td>123456789</td>
+                    <td>123@126.com</td>
+                    <td><a href="#">编辑</a><a href="#" style="margin:0">删除</a></td>
+                </tr>
+                <tr align="center" height="42">
+                	<td>张三</td>
+                    <td>123456789</td>
+                    <td>123@126.com</td>
+                    <td><a href="#">编辑</a><a href="#" style="margin:0">删除</a></td>
+                </tr>
+                <tr align="center" height="42">
+                	<td>张三</td>
+                    <td>123456789</td>
+                    <td>123@126.com</td>
+                    <td><a href="#">编辑</a><a href="#"  onClick="dele()" style="margin:0">删除</a></td>
+                </tr>
+                
+            
+            </tbody>
+          
+          </table>
+            	
+            
+          </div>
+          <div class="modal-footer hidden">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+          
+        </div>
+      </div>
+</div>
+ <!--弹出框管理添加报警联系人-->
+	<div class="modal fade" id="mydal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content palaning">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">添加报警联系人</h4>
+          </div>
+          <div class="modal-body">
+           <!-- <div class="addmek clearfix" style="margin-bottom:10px;">
+            	<button class="addbtn fr" style="width:146px;"><i class="ico"></i>添加报警联系人</button>
+            </div>-->
+           <style>
+           	.addm label{ font-weight:normal; font-size:14px; color:#999999; margin-right:14px;}
+			.addm td{ vertical-align:middle}
+			.addm .text{ height:24px; border:#c9c9c9 solid 1px; width:209px;}
+           </style>
+            <table class="addm" width="100%">
+          	
+          	<tbody>
+            	<tr height="50">
+                	<td align="center"><label>姓名</label><input type="text" class="text form-control"></td>
+                    
+                </tr>
+                <tr align="center" height="50">
+                	<td align="center"><label>手机</label><input type="text" class="text form-control"></td>
+                    
+                </tr>
+                <tr align="center" height="50">
+                	<td align="center"><label>邮箱</label><input type="text" class="text form-control"></td>
+                    
+                </tr>
+               
+            </tbody>
+          
+          </table>
+            	
+            
+          </div>
+          <div class="modal-footer" style="text-align:center; border-top:none; padding:0;">
+            <button type="button" class="btn btn-default hidden" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary text-center" style="width:94px; height:24px; padding:0; line-height:24px; border:#1f5b9a solid 1px; border-radius:20px;">确定</button>
+          </div>
+          
+        </div>
+      </div>
+</div>
+	
+    
+ 
+ <script>
+ 	$(function(){
+		var h=$(window).height();
+	var w=$(window).width()
+  	$('.shows').height(h);
+  	$('.shows').width(w);
+ 	
+	})
+ </script>
+ 
+<div class="popoBox" style="display:none">
+    <h4>确认删除?</h4>
+    <div class="modal-footer">
+    <span class="btn no btn-danger ">取消</span>
+    <span class="btn ok btn-primary">确定</span>
+    </div>
+</div>
+ 
+ <div class="shows" style="display:none"></div>
+
+ 
+    
+</body>
+
+</html>

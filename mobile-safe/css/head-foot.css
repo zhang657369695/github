@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+*{font-family: "微软雅黑";}
+:-webkit-input-placeholder {color:#a9a9a9; }
+:-moz-placeholder {color:#a9a9a9; }  
+:-ms-input-placeholder {color:#a9a9a9; } 
+:-moz-placeholder {color:#a9a9a9; }
+.haed{
+	height: 52px;
+	background-color: #1f5b9a;
+	line-height: 50px;
+	padding: 0;
+	padding-right: 10px;
+}
+.haed .h_left{
+	padding: 0;
+}
+.haed .h_left .logo{
+	width: 52px;
+	height: 100%;
+	line-height: 51px;
+	background-color: #214b78;
+}
+.haed .h_left .title{
+	font-size: 22px;
+	color: #fff;
+	line-height: 50px;
+	padding-left: 16px;
+}
+.h_right{
+	height: 100%;
+}
+.h_right .name span{
+	font-size: 16px;
+	color: #fff;
+	padding-right: 14px;
+	cursor: pointer;
+}
+.h_right .name{
+	position: relative;
+	padding-right: 30px;
+	border-right:1px solid #2572af;
+}
+.h_right .name .ico{
+	 width:0; 
+    height:0; 
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-top:5px solid #fff;
+    vertical-align: middle;
+    position: relative;
+    top:12px;
+}
+.h_right .popo .btn-primary{
+	width: 35px;
+	height: 35px;
+	background:url(../imges/head-foot/popo.png) no-repeat left center;
+}
+.h_right .popo{
+	padding: 0 20px 0 30px;
+	position: relative;
+}
+.h_right .popo .badge{
+	width: 28px;
+	height: 28px;
+	line-height: 22px;
+	background-color: #fc0000;
+	border-radius: 50%;
+	font-size: 14px;
+	color: #fff;
+	position: absolute;
+	left: 62px;
+	top:10px;
+}
+.name .off{
+	width: 172px;
+	height: 30px;
+	text-align: center;
+	line-height: 26px;
+	font-size: 16px;
+	color: #343434;
+	background-color: #fff;
+	border: #e5e5e5 solid 1px;
+	cursor: pointer;
+	position:absolute;
+	left: 0px;
+	top:52px;
+	z-index: 200;
+}
+.name .off:hover{
+	color: red;
+}
+
+
+
