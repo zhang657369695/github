@@ -1,0 +1,640 @@
+html{
+	font-size:62.5%;
+}
+body{
+	background: url(../img/c.png) repeat-y;
+}
+.container-fluid{
+	padding: 0;
+}
+.appbg{
+	position: relative;
+	padding: 0;
+	background: url(../img/bg.jpg) no-repeat;
+	background-size:100%;
+}
+
+.appbg > .countDown{
+	color: #103a21;
+    font-size: 1rem;
+    position: absolute;
+    left: 3.5rem;
+    top: 1rem;
+	
+}
+
+.appbg > .newsList{
+	width: 30rem;
+	height: 2.43rem;
+	background-color: rgba(0,0,0,0.6);
+	border-radius:1.3rem;
+	margin: 0 auto;
+	overflow: hidden;
+	margin-bottom:1.35rem;
+	margin-top: 13rem;
+	
+}
+.appbg > .newsList li{
+	text-align: center;
+	color: #fff;
+	line-height: 2.4rem;
+	font-size: 1.25rem;
+}
+
+.appbg .MatchTeam{
+	margin-left:1.4rem;
+	margin-right:1.4rem;
+	position: relative;
+	margin-bottom: 3rem;
+	z-index: 10;
+}
+.appbg .MatchTeam i{
+	width: 5.62rem;
+    height: 6rem;
+    position: absolute;
+    right: -1rem;
+    top: -5rem;
+	background: url(../img/icon.png) no-repeat;
+	background-size:100% 100%;
+	z-index: 1;
+}
+.appbg .MatchTeam h2{
+	height: 3.25rem;
+	line-height: 3.25rem;
+	color: #fff;
+	font-size: 2rem;
+	text-align: center;
+	background-color: #2a7a47;
+	position: relative;
+    z-index: 88;
+}
+
+.MatchTeam > div ul{
+	padding-top: 2.25rem;
+	position: relative;
+	left: 1rem;
+}
+.MatchTeam > div ul li{
+	text-align: center;
+	padding: 0;
+	/*padding-left: 1.2rem;*/
+	margin-bottom: 1rem;
+}
+.MatchTeam > div ul li.tactitlyApprove{
+	margin-bottom: 0;
+}
+.MatchTeam > div{
+	margin: 0;
+	background-color: #181915;
+	padding-bottom: 2rem;
+}
+.MatchTeam > div .MatchTeamLeft,.MatchTeam > div .MatchTeamCenter,.MatchTeam > div .MatchTeamrRight{
+	padding: 0;
+	display: inline-block;
+}
+.MatchTeam > div .MatchTeamrRight{
+	position: relative;
+	left: -1rem;
+}
+.MatchTeam > div .MatchTeamLeft > span:nth-child(1){
+	color: #ffce00;
+	font-size: 1.375rem;
+	margin-top:1rem;
+	vertical-align: middle;
+	float: left;
+	text-align: right;
+	width: 5.5rem;
+	
+}
+.MatchTeam > div .MatchTeamLeft span:nth-child(2){
+	width: 4rem;
+	display: inline-block;
+	margin-left: 0.4rem;
+}
+.MatchTeam > div .MatchTeamLeft span:nth-child(2) img{
+	width: 100%;
+	height: 100%;
+}
+.MatchTeam > div .MatchTeamCenter{
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	padding: 0 0.3rem;
+	position: relative;
+	top:1rem;
+	left: -0.4rem;
+}
+.MatchTeam > div .MatchTeamCenter p{
+	font-size: 1.12rem;
+	display: block;
+	text-align: center;
+}
+.MatchTeam > div .MatchTeamCenter span{
+	font-size: 1.43rem;
+	font-weight: 800;
+	display: block;
+	text-align: center;
+}
+
+.MatchTeam .MatchTeamrRight > span:nth-child(2){
+	color: #fff;
+	font-size: 1.375rem;
+	margin-top: 1rem;
+	display: inline-block;
+	text-align: left;	
+	width: 6rem;
+	
+}
+.MatchTeam .MatchTeamrRight span:nth-child(1){
+	width: 4rem;
+	display: inline-block;
+}
+.MatchTeam .MatchTeamrRight span:nth-child(1) img{
+	width: 100%;
+	height: 100%;
+	
+}
+.MatchTeam > div .MatchTeamLeft > span.MatchTeamMin{
+	margin-top: 0;
+}
+
+.MatchTeam .MatchTeamrRight > span.MatchTeamMin{
+	position: relative;
+	top:1rem;
+}
+.MatchTeam > div .MatchTeamCenterMin{
+    /*padding-left: 1rem;
+    margin-right: 0.7rem;*/
+}
+
+
+div.ruleList{
+		padding-bottom: 2rem;
+	}
+	div.ruleList h3{
+		text-align: left;
+		font-size: 1.75rem;
+		color: #fff;
+		margin-bottom: 1.25rem;
+	}
+	div.ruleList >dl dd{
+		font-size: 1rem;
+		color: #fff;
+		line-height: 1.8rem;
+	}
+	
+
+
+
+/*加奖样式*/
+
+.priceMarkup{
+	width: 100%;
+	text-align: center;
+	position: relative;
+	/*background: url(../img/icon02.png) center top no-repeat;*/
+	background-size:94%;
+	/*height: 30rem;*/
+}
+.priceMarkup > .priceMarkupBg{
+	width: 84%;
+	position: relative;
+	z-index: 2;
+}
+
+
+.tournameentContent{
+	width: 100%;
+	position: absolute;
+    z-index: 222;
+    left: 0;
+    top: 0;
+   
+	
+}
+.tournameentContent > .time{
+	font-size:1rem;
+	color: #ffd819;
+    position: absolute;
+    top:3%;
+    left:40%;
+}
+.tournameentContent > .tournament{
+	position: relative;
+	top:4.6rem;
+}
+.tournameentContent > .tournament span img{
+	width: 50%;
+}
+.tournameentContent > .tournament > .tournamentName:nth-child(1){
+	margin-left: 22%;
+}
+.tournameentContent > .tournament > .tournamentName{
+	width: 26%;
+   
+}
+
+.tournament > .tournamentName p{
+	width: 100%;
+}
+.tournament > .tournamentName p em{
+	font-size: 1.125rem;
+	color: #fff;
+}
+.tournament > .tournamentName p i{
+	width: 45%;
+	display:block;
+	height: 0.75rem;
+	margin-top: 0.7rem;
+	background-color: rgba(0,0,0,.3);
+    border-radius: 80%;
+}
+.tournamentTab{
+    position: relative;
+    top:5rem;
+
+}
+.tournamentTab > nav li{
+	color: #fff;
+	font-size: 1.12rem;
+	display: inline-block;
+	cursor: pointer;
+}
+.tournamentTab > nav li.active{
+	color: #ffd819;
+}
+.tournamentCent .tournamentCentListbtnBox{
+	padding-left: 1.5rem;
+}
+.tournamentCent .tournamentCentListbtnBox .btn{
+	width: 23%;
+	height: 8rem;
+	display: inline-block;
+	background:url(../img/buttonr.png) no-repeat;
+	background-size: 90% 80%;
+	position: relative;
+}
+.tournamentCent .tournamentCentListbtnBox .btn:nth-child(1){
+	left: 1%;
+}
+.tournamentCent .tournamentCentListbtnBox .btn:nth-child(3){
+	left: -1%;
+}
+.tournamentCent .tournamentCentListbtnBox .btn:nth-child(1) i{
+	position: absolute;
+    left: -11%;
+    top: 3%;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 800;
+}
+.tournamentCent .tournamentCentListbtnBox .yellow{
+	background: url(../img/buttony.png) no-repeat;
+	background-size: 90% 80%;
+}
+.tournamentCent .tournamentCentListbtnBox .yellow{
+	
+}
+.tournamentCent .tournamentCentListbtnBox .yellow a{
+	color: #20730e !important;
+}
+.tournamentCent .tournamentCentListbtnBox .btn a{
+	color: #fff;
+    display: inline-block;
+    width: 80%;
+    font-size: 1.2rem;
+    position: relative;
+    top: -0.6rem;
+    left: -0.4rem;
+}
+.tournamentCent .tournamentCentListbtnBox .btn a:link{
+	text-decoration: none;
+}
+
+.price  > .pricead span{
+	display: inline-block;
+	height: 100%;
+	cursor: pointer;
+	font-size: 1.25rem;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	width: 1.6rem;
+	position: relative;
+}
+.price > .pricead .text{
+	font-size: 1rem;
+	color:rgb(255,255,255);
+	opacity: 1;
+	border: none;
+	width: 3rem;
+	line-height: 1.2; 
+	text-align: center;
+	border-right:rgb(255,255,255) solid 0.1rem;
+	border-left:rgb(255,255,255) solid 0.1rem;
+	background: none;
+	border-radius:0;
+	height: 100%;
+	position: relative;
+	top:-0.3rem
+}
+.priceadtext{
+	font-size: 1rem;
+	color: #fff;
+	padding-left: 1rem;
+	position: relative;
+	top:0.5rem;
+}
+.tournamentCentList .submit{
+	cursor: pointer;
+	
+	background:none;
+	font-size: 1rem;
+	border: none;
+	color: #fff;
+	text-align: center;
+	background: url(../img/button.png) no-repeat;
+	background-size: 100% 100%;
+}
+.tournamentCentList form{
+	position: relative;
+}
+.tournamentCentList form .price{
+	width: 100%;
+	/*position: absolute
+	top: 22%;
+	left: 18%;*/
+    text-align: center;
+}
+
+.balancesumBtn{
+	/*position: absolute;
+	top:7rem;*/
+	width: 100%;
+	text-align: center;
+	
+}
+.balancesumBtn > span{
+	font-size: 1rem;
+	color: #fff;
+}
+ .price  > .pricead{
+	border: #ffffff solid 1px;
+	width: 8rem;
+	height: 1.8rem;
+	overflow: hidden;
+}
+@media screen and (orientation:portrait) {
+    /*  css[竖向定义样式]  */
+ .tournameentContent > .tournament > .tournamentName:nth-child(1){
+ 	margin-left: 25%;
+ 	
+ }
+ .tournameentContent > .tournament > .tournamentName:nth-child(2){
+ 	margin-left: -4%;
+ }
+   .tournamentTab > nav li{
+	margin: 1% 6% 0 6%;
+}
+   
+   .tournamentCentList form .price{
+   	position: absolute;
+   	left: 6.2rem;
+   	top:3rem;
+   }
+   
+   .lottery{
+		margin-top: 0;
+		margin-bottom: 0.625rem;
+	}
+	.balancesumBtn{
+		position: absolute;
+		top:5rem;
+		left: -2.4rem;
+	}
+	.tournament > .tournamentName p i{
+		margin-left: 2rem;
+	}
+	.tournamentCentList .submit{
+		line-height: 1.4;
+		width: 10rem;
+		height: 2rem;
+	}
+	.balancesumBtn > span{
+		font-size: 1rem;
+	}
+	.tournament > .tournamentName p i{
+	margin-left: 2.6rem;
+}
+	
+}
+
+@media screen and (orientation:landscape) {
+    /*   css[横向定义样式]  */
+   .tournameentContent > .tournament > .tournamentName{
+   	margin-top: 5rem;
+   }
+    .tournameentContent > .tournament > .tournamentName:nth-child(1){
+ 	margin-left: 25%;
+ 	
+ }
+ .tournameentContent > .tournament > .tournamentName:nth-child(2){
+ 	margin-left: -4%;
+ }
+   .tournamentTab > nav li{
+	margin: 1% 6% 0 6%;
+}
+.tournament > .tournamentName p i{
+	margin-left: 5rem;
+}
+.tournamentTab{
+	position: relative;
+		top:8rem
+	}
+	.lottery{
+		margin-bottom: 1rem;
+	}
+	
+	.tournamentCentList form .price{
+		position: absolute;
+	   	left: 16.2rem;
+	   	top:5rem;
+	}
+	.tournamentCentList .submit{
+		line-height: 1.4;
+		width: 12rem;
+		height: 3rem;
+		font-size: 1.6rem;
+	}
+	.balancesumBtn > span{
+		font-size: 1.4rem;
+	}
+	.price > .pricead{
+		width: 12rem;
+    	height: 2.8rem;
+	}
+	.price > .pricead span{
+		font-size: 1.4rem;
+		width: 2.4rem;
+		line-height: 2;
+	}
+	.priceadtext{
+		font-size: 1.6rem;
+	}
+	.price > .pricead .text{
+		width: 6rem;
+	}
+	.tournamentCent .tournamentCentListbtnBox .btn{
+		height: 10rem;
+	}
+	.tournamentCent .tournamentCentListbtnBox .btn a{
+		font-size: 1.6rem;
+	}
+	.tournameentContent > .time{
+		font-size: 2rem;
+		top:3%
+	}
+	.tournamentTab > nav li{
+		font-size: 2rem;
+	}
+	.tournament > .tournamentName p em{
+		font-size: 1.6rem;
+	}
+	.tournamentCent .tournamentCentListbtnBox .btn:nth-child(1) i{
+		font-size: 2rem;
+		top:0rem;
+	}
+}
+
+.btncent{
+	padding-top: 68%;
+	
+}
+.btncent > a.btn{
+	width: 12.5rem;
+	height: 2.81rem;
+	line-height: 2;
+	position: absolute;
+	background: url(../img/button.png) no-repeat;
+	background-size:100% 100%;
+	font-size: 1rem;
+	color: #fff;
+	text-align: center;
+	left: 39%;
+    top: 38%;
+}
+
+.showPop{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 9999;
+	left: 0px;
+	top:0px;
+	overflow: hidden;
+	display: none;
+	background-color: rgba(0,0,0,0.8);
+}
+.pop{
+	width: 21.25rem;
+	height: 18.75rem;
+	border-radius:0.2rem;
+	background-color: #fff;
+	position: relative;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+}
+.pop > i{
+	width: 0.9rem;
+	height: 0.9rem;
+	position: absolute;
+	right: 0.625rem;
+	top:0.625rem;
+	background: url(../img/colse.jpg) no-repeat;
+	background-size:100% 100%;
+	cursor: pointer;
+}
+.pop > h4{
+	padding-top: 1.25rem;
+	margin-bottom: 1.25rem;
+	font-size: 1.2rem;
+	color: #e62f17;
+	text-align: center;
+}
+.pop .QrCode{
+	text-align: center;
+}
+.pop > h5{
+	color: #191c19;
+	font-size: 0.85rem;
+	text-align: center;
+	padding-top: 1.25rem;
+}
+
+/*提示框*/
+.promptMessagePop{
+	width: 22.5rem;
+	padding: 1.25rem;
+	border-radius:0.8rem;
+	text-align: center;
+	background-color: rgba(255,255,255,1);
+	position: fixed;
+	z-index: 999999;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+}
+.promptMessagePop > h2{
+	font-size: 1.375rem;
+	color: #df2a1e;
+	font-weight: 800;
+	text-align: center;
+}
+.promptMessagePop > h4{
+	font-size: 1.375rem;
+	margin-top: 1.25rem;
+	color: #df2a1e;
+	text-align: center;
+}
+.promptMessagePop > div{
+	margin-top: 1.25rem;
+	text-align: center;
+}
+.promptMessagePop > div .btn{
+	width: 7.5rem;
+	height: 1.85rem;
+	line-height: 0.8;
+	display: inline-block;
+	margin: 0 0.75rem;
+	
+}
+.promptMessagePop > div .cancelbg{
+	background: url(../img/cancel.png) no-repeat;
+	background-size:100% 100%;
+	color: #df2a1e;
+}
+.promptMessagePop > div .okLinkbg{
+	background: url(../img/ok.png) no-repeat;
+	background-size:100% 100%;
+	color: #fff;
+}
+.titleText{
+	padding-top: 5rem;
+}
+.titleText > h1{
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 1.625rem;
+	color: #fff;
+	font-weight: 800;
+	-webkit-text-stroke:#2a7a48 1px;
+}
+.titleText > h5{
+	text-align: center;
+	font-size: 1.4rem;
+	color: #fff;
+	opacity: 1 ;
+	font-weight:bold;
+	-webkit-text-stroke:#2a7a48 1px;
+}

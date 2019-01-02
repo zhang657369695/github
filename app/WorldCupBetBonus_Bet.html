@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>比赛加奖页面</title>
+    <link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+    <script type="text/javascript" src="js/bootstrap/js/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="js/addAward.js" ></script>
+    <script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   		});
+   		//判断是否是安卓还是ios  
+		function isAndroid_ios(){  
+		var u = navigator.userAgent, app = navigator.appVersion;  
+		var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器  
+		var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端  
+		return isAndroid==true?true:false;  
+		}  
+		
+		$(function(){
+			if(isAndroid_ios()){  
+	  
+			//安卓 
+			
+			}else{  
+			  
+			//ios  
+			  $(".price > .pricead span").css("top","-0.4rem");
+			} 
+		})
+		
+   		
+    </script>
+   
+	</head>
+	<body>
+		
+	<div class="container-fluid">
+		<div class="col-sm-12 col-xs-12 col-md-12 appbg" style="overflow: hidden;">
+			<!--time-->
+			<div class="countDown">
+				距离投注截止倒计时:<span class="JS-tian"></span>天<span class="JS-shi"></span>时<span class="JS-fen"></span>分<span class="JS-miao"></span>秒
+			</div>
+			<!--消息轮动轮播-->
+			<div class="newsList" id="list">
+				<ul>
+					<li>喜报：东北大土豆 喜中xx元，斩下300元加奖</li>
+					<li>喜报：东北大土豆 喜中xx元，斩下300元加奖</li>
+					<li>喜报：东北大土豆 喜中xx元，斩下300元加奖</li>
+					<li>喜报：东北大土豆 喜中xx元，斩下300元加奖</li>
+					<li>喜报：东北大土豆 喜中xx元，斩下300元加奖</li>
+					<li>喜报：东北大土豆 喜中xx元，斩下300元加奖</li>
+					<li>喜报：东北大土豆 喜中xx元，斩下300元加奖</li>
+					<li>喜报：东北大土豆 喜中xx元，斩下300元加奖</li>
+					<li>喜报：东北大土豆 喜中xx元，斩下300元加奖</li>
+				</ul>
+			</div>
+			<!--主题内容-->
+			<div class="priceMarkup">
+				<img src="img/icon02.png"  class="priceMarkupBg" />
+				<div class="tournameentContent">
+					<div class="time">06-17 23:00</div>
+					<div class="tournament clearfix">
+						<div class="tournamentName fl">
+							<span>
+								<img src="img/guoqi.png" alt="" />
+							</span>
+							<p>
+								<em class="conutriesname">巴西</em>
+								<i></i>
+							</p>
+						</div>
+						<div class="tournamentName fl">
+							<span><img src="img/moxige.png" alt="" /></span>
+							<p>
+								<em class="conutriesnames">墨西哥</em>
+								<i></i>
+							</p>
+						</div>
+						
+					</div>
+					<div class="tournamentTab">
+						<nav class="lottery">
+							<li class="active" name="1">北京单场</li>
+							<li name="2">竞彩足球</li>
+						</nav>
+						<div class="tournamentCent">
+							<section class="tournamentCentList tournamentCentbj">
+								<form class="form01" action="" method="post" id="form_export">
+									<div class="tournamentCentListbtnBox">
+										<span class="btn yellow">
+											<!--yellow默认选中状态-->
+											<i>-1</i>
+											<a href="javascript:;" n="1.82">胜1.82</a>
+										</span>
+										<span class="btn">
+											<a href="javascript:;" n="2.65">平2.65</a>
+										</span>
+										<span class="btn">
+											<a href="javascript:;" n="2.21">负2.21</a>
+										</span>
+									</div>
+									<div class="price clearfix">
+										<div class="pricead fl">
+											<span class="minus">-</span>
+											<input type="number" value="10" class="text containerText" onkeyup="this.value=((this.value.match(/\d+(\.\d{0,2})?/)||[''])[0])"/>
+											<span class="increase">+</span>
+										</div>
+										<div class="fl priceadtext">
+											倍，共<i class="numberyuan">20.00</i>元，奖金：<i class="sum" bonus="">23.66</i>元
+										</div>
+									</div>
+									<div class="balancesumBtn">
+										<span>余额:<i class="loginMoney">120.98</i>元</span>
+										<input type="button" class="submit submitBtn1" value="立享加奖" />
+									</div>
+								</form>
+							</section>
+							<section class="tournamentCentList tournamentCentjc" style="display: none;">
+								<form class="form02" action="" method="post" id="form_export2">
+									<div class="tournamentCentListbtnBox">
+										<span class="btn">
+											<i>-1</i>
+											<a href="javascript:;" n="5.82">胜5.82</a>
+										</span>
+										<span class="btn yellow">
+											<!--yellow默认选中状态-->
+											<a href="javascript:;" n="3.65">平3.65</a>
+										</span>
+										<span class="btn">
+											<a href="javascript:;" n="4.21">负4.21</a>
+										</span>
+									</div>
+									<div class="price clearfix">
+										<div class="pricead fl">
+											<span class="minus">-</span>
+											<input type="number" class="text containerText" />
+											<span class="increase">+</span>
+										</div>
+										<div class="fl priceadtext">
+											倍，共<i class="numberyuan">20.00</i>元，奖金：<i class="sum">36.40</i>元
+										</div>
+									</div>
+									<div class="balancesumBtn">
+										<span>余额:<i>120.98</i>元</span>
+										<input type="button" class="submit submitBtn2" value="立享加奖" />
+									</div>
+									
+								</form>
+							</section>
+							
+						</div>
+						
+						
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			
+			
+			
+			<div class="ruleList col-sm-12 col-xs-12 col-md-12">
+				<h3>活动规则</h3>
+				<dl>
+				<dd>活动时间：世界杯期间共选定8场加奖比赛，以当前页面展示比赛截止投注时间为准。</dd>
+				<dd>活动条件：</dd>
+				<dd>1. 活动期间，在本页面投注选定比赛[单关胜平负]玩法，非全包投注方式，若中奖则加奖5%。</dd>
+				<dd>2. 每个用户仅能加奖一笔订单，若有多笔符合条件订单，则按照奖金最多的一笔加奖。</dd>
+				<dd>3. 加奖奖金在方案返奖后24小时内发放至用户的红包账户，红包只能投注，不可直接提现。</dd>
+				<dd>4. 每个用户每期（当期全部加奖场次）加奖上限300元红包。分两批发放，一个发放当日生效，一个次日生效。
+</dd>
+<dd>5. 若您收到的奖金有问题，请立刻联系在线客服为您解决。</dd>
+<dd>活动人群：直接注册在爱波网下散户，以及彩乐瀑APP、百度乐彩、微信合作、爱波平板、爱波WAP下的所有用户。</dd>
+<dd>注意：一切以页面最新公布内容为准，如发现用户作弊行为（包括但不限于使用多个账号刷单，刷设备等参与活动），本平台有权取消用户的活动资格。</dd>
+			</dl>
+		</div>
+		
+		</div>
+		
+		
+		
+	</div>
+	<script>
+		(function () {
+			var data = "2018/06/13 16:58:59";
+			  var tian = document.getElementsByClassName('JS-tian')[0];
+			  var shi = document.getElementsByClassName('JS-shi')[0];
+			  var fen = document.getElementsByClassName('JS-fen')[0];
+			  var miao = document.getElementsByClassName('JS-miao')[0];
+			  var endTime = new Date(data).getTime() + 1000;
+			  var interval = null;
+			  interval = setInterval(function () {
+			   var syhm = endTime - Date.now(); // 剩余毫秒
+			   if (syhm >= 0) {
+			    tian.innerText = Math.floor(syhm / 1000 / 60 / 60 / 24);
+			    shi.innerText = Math.floor(syhm / 1000 / 60 / 60 % 24);
+			    fen.innerText = Math.floor(syhm / 1000 / 60 % 60);
+			    miao.innerText = Math.floor(syhm / 1000 % 60);
+			   } else {
+			    clearInterval(interval);
+			    $(".countDown").hide();
+			   }
+			  }, 0);
+	 	})();
+		
+		
+	</script>
+	</body>
+</html>
